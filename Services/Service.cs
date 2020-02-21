@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenTheDoor
+namespace OpenTheDoor.Services
 {
-    public class Class1
+    class Service
     {
     }
 }
