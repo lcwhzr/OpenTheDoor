@@ -8,10 +8,16 @@ namespace OpenTheDoor.Models
 {
     class Permission
     {
-        public static string id;
-        public static string serviceId;
-        public static string roleId;
-        public static string identityId;
-        
+        public string id;
+        public string serviceId;
+        public string roleId;
+        public string identityId;
+
+        public Permission(string serviceId, string roleId, string identityId)
+        {
+            this.serviceId = serviceId;
+            this.roleId = roleId;
+            this.identityId = identityId;
+        }
     }
 }

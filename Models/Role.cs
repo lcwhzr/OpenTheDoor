@@ -8,9 +8,15 @@ namespace OpenTheDoor.Models
 {
     class Role
     {
-        public static string id;
-        public static string name;
-        public static string key;
+        public string id;
+        public string name;
+        public string key;
 
+        public Role(string name, string key)
+        {
+            id = new Guid().ToString();
+            this.name = name;
+            this.key = key;
+        }
     }
 }

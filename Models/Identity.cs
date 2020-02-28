@@ -9,9 +9,15 @@ namespace OpenTheDoor.Models
     class Identity
     {
 
-        public static string id;
-        public static string idToken;
-        public static List<Permission> permissions;
+        public string id;
+        public string idToken;
+        public List<Permission> permissions;
 
+        public Identity()
+        {
+            id = new Guid().ToString();
+            idToken = new Guid().ToString();
+            permissions = new List<Permission>();
+        }
     }
 }
