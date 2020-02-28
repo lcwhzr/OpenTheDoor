@@ -10,7 +10,7 @@ namespace OpenTheDoor.Models
     {
 
         public string id;
-        public string name; 
+        public string name;
         public string url;
 
         public Service(string name, string url)
