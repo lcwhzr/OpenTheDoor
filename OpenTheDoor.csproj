@@ -9,4 +9,8 @@
     <PackageReference Include="xunit.core" Version="2.4.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Factories\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
 </Project>
