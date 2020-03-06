@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTheDoor", "OpenTheDoor.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoorAPI", "..\DoorAPI\DoorAPI.csproj", "{C8781213-DFA8-454B-9ADD-E5812AA65158}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoorAPI", "DoorAPI\DoorAPI.csproj", "{0890EE61-DA9A-4685-BE8F-AFF3AA699F00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
