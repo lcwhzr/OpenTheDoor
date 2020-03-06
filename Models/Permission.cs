@@ -15,6 +15,7 @@ namespace OpenTheDoor.Models
 
         public Permission(string serviceId, string roleId, string identityId)
         {
+            id = new Guid().ToString();
             this.serviceId = serviceId;
             this.roleId = roleId;
             this.identityId = identityId;

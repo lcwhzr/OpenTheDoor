@@ -12,12 +12,14 @@ namespace OpenTheDoor.Models
         public string id;
         public string name;
         public string url;
+        public List<string> ipRange;
 
-        public Service(string name, string url)
+        public Service(string name, string url, List<string> ipRange)
         {
             id = new Guid().ToString();
             this.name = name;
             this.url = url;
+            this.ipRange = ipRange;
         }
     }
 }
