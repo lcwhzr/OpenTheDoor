@@ -10,15 +10,10 @@ namespace OpenTheDoor.Models
         private string UserIdentifier;
         private Service Service;
         private List<Scope> Scopes;
-        private Boolean Revoked;
+        private bool Revoked = false;
 
-        public AccesToken(
-            string identifier,
-            DateTime expiry,
-            string userIdentifier,
-            Service service,
-            List<Scope> scopes
-        ) {
+        public AccesToken(string identifier, DateTime expiry, string userIdentifier, Service service, List<Scope> scopes)
+        {
             Identifier = identifier;
             Expiry = expiry;
             UserIdentifier = userIdentifier;
@@ -51,7 +46,7 @@ namespace OpenTheDoor.Models
             return Scopes;
         }
 
-        public Boolean IsRevoke()
+        public bool IsRevoked()
         {
             return Revoked;
         }

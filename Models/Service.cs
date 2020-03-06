@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace OpenTheDoor.Models
 {
@@ -7,14 +6,13 @@ namespace OpenTheDoor.Models
     {
         private string Name;
         private string ApiKey;
-        private Boolean Active;
         private List<Scope> Scopes;
+        private bool Active = true;
 
-        public Service(string clientName, string apiKey)
+        public Service(string name, string apiKey)
         {
-            Name = clientName;
+            Name = name;
             ApiKey = apiKey;
-            Active = true;
         }
 
         public string GetName()
@@ -27,19 +25,24 @@ namespace OpenTheDoor.Models
             return ApiKey;
         }
 
-        public Boolean IsActive()
+        public List<Scope> GetScopes()
+        {
+            return Scopes;
+        }
+
+        public void SetScopes(List<Scope> scopes)
+        {
+            Scopes = scopes;
+        }
+
+        public bool IsActive()
         {
             return Active;
         }
 
-        public void Desactive()
+        public void SetActive(bool active)
         {
-            Active = false;
-        }
-
-        public List<Scope> GetScopes()
-        {
-            return Scopes;
+            Active = active;
         }
     }
 }
