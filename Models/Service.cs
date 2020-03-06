@@ -1,23 +1,21 @@
-﻿using System.Collections.Generic;
-
-namespace OpenTheDoor.Models
+﻿namespace OpenTheDoor.Models
 {
     class Service
     {
-        private string Name;
+        private string DomainName;
         private string ApiKey;
-        private List<Scope> Scopes;
+        private Scope Scope;
         private bool Active = true;
 
-        public Service(string name, string apiKey)
+        public Service(string domainName, string apiKey)
         {
-            Name = name;
+            DomainName = domainName;
             ApiKey = apiKey;
         }
 
-        public string GetName()
+        public string GetDomainName()
         {
-            return Name;
+            return DomainName;
         }
 
         public string GetApiKey()
@@ -25,14 +23,14 @@ namespace OpenTheDoor.Models
             return ApiKey;
         }
 
-        public List<Scope> GetScopes()
+        public Scope GetScope()
         {
-            return Scopes;
+            return Scope;
         }
 
-        public void SetScopes(List<Scope> scopes)
+        public void SetScope(Scope scope)
         {
-            Scopes = scopes;
+            Scope = scope;
         }
 
         public bool IsActive()

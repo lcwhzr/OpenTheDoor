@@ -2,16 +2,16 @@
 {
     class Scope
     {
-        private string ScopeName;
+        private string Key;
 
-        public Scope(string scope)
+        public Scope(string scopeKey)
         {
-            ScopeName = scope;
+            Key = scopeKey;
         }
 
-        public string GetScopeName()
+        public string GetKey()
         {
-            return ScopeName;
+            return Key;
         }
     }
 }
