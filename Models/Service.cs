@@ -1,25 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OpenTheDoor.Models
+﻿namespace OpenTheDoor.Models
 {
     class Service
     {
+        private readonly string DomainName;
+        private readonly string ApiKey;
+        private Scope Scope;
+        private bool Active = true;
 
-        public string id;
-        public string name;
-        public string url;
-        public List<string> ipRange;
-
-        public Service(string name, string url, List<string> ipRange)
+        public Service(string domainName, string apiKey)
         {
-            id = new Guid().ToString();
-            this.name = name;
-            this.url = url;
-            this.ipRange = ipRange;
+            DomainName = domainName;
+            ApiKey = apiKey;
+        }
+
+        public string GetDomainName()
+        {
+            return DomainName;
+        }
+
+        public string GetApiKey()
+        {
+            return ApiKey;
+        }
+
+        public Scope GetScope()
+        {
+            return Scope;
+        }
+
+        public void SetScope(Scope scope)
+        {
+            Scope = scope;
+        }
+
+        public bool IsActive()
+        {
+            return Active;
+        }
+
+        public void SetActive(bool active)
+        {
+            Active = active;
         }
     }
 }
