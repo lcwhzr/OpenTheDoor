@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace OpenTheDoor.Models
 {
-    class AccesToken
+    internal class AccesToken : IEntity
     {
+
         private string Identifier;
         private DateTime Expiry;
         private string UserIdentifier;
         private Service Service;
         private List<Scope> Scopes;
         private bool Revoked = false;
+
+        public Guid Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+
 
         public AccesToken(string identifier, DateTime expiry, string userIdentifier, Service service, List<Scope> scopes)
         {
