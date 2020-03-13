@@ -43,21 +43,31 @@ namespace API.Controllers
         //    return new ObjectResult(message);
         //}
 
-        [HttpGet("only-auth-access")]
-        [Authorize(Policy = Policies.authentication_access)]
-        public IActionResult AuthAccess()
-        {
-            var message = $"Hello from {nameof(AuthAccess)}";
-            return new ObjectResult(message);
-        }
-
-        //[HttpGet("known")]
+        //[HttpGet("only-auth-access")]
         //[Authorize(Policy = Policies.authentication_access)]
         //public IActionResult AuthAccess()
         //{
         //    var message = $"Hello from {nameof(AuthAccess)}";
         //    return new ObjectResult(message);
         //}
+
+        [HttpGet("method")]
+        [Authorize(Policy = Policies.authentication_access)]
+        public IActionResult CreateAccess()
+        {
+            var message = $"Hello from {nameof(CreateAccess)}";
+            return new ObjectResult(message);
+        }
+
+
+
+        [HttpGet("method2")]
+        [Authorize(Policy = Policies.all_access)]
+        public IActionResult Create2Access()
+        {
+            var message = $"Hello from {nameof(Create2Access)}";
+            return new ObjectResult(message);
+        }
 
         //[HttpGet("only-third-parties")]
         //public IActionResult OnlyThirdParties()

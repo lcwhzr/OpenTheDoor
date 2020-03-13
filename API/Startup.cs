@@ -37,7 +37,7 @@ namespace API
             services.AddAuthorization(options =>
             {
                 //options.AddPolicy(Policies.OnlyEmployees, policy => policy.Requirements.Add(new OnlyEmployeesRequirement()));
-                options.AddPolicy(Policies.all_access, policy => policy.Requirements.Add(new AuthAccessRequirement()));
+                options.AddPolicy(Policies.all_access, policy => policy.Requirements.Add(new AllAccessRequirement()));
                 options.AddPolicy(Policies.authentication_access, policy => policy.Requirements.Add(new AuthAccessRequirement()));
                 //options.AddPolicy(Policies.OnlyThirdParties, policy => policy.Requirements.Add(new OnlyThirdPartiesRequirement()));
             });
@@ -45,6 +45,7 @@ namespace API
             //services.AddSingleton<IAuthorizationHandler, OnlyEmployeesAuthorizationHandler>();
             //services.AddSingleton<IAuthorizationHandler, OnlyServicesAuthorizationHandler>();
             services.AddSingleton<IAuthorizationHandler, AuthAccessAuthorizationHandler>();
+            services.AddSingleton<IAuthorizationHandler, AllAccessAuthorizationHandler>();
             //services.AddSingleton<IAuthorizationHandler, OnlyServicesAuthorizationHandler>();
             //services.AddSingleton<IAuthorizationHandler, OnlyThirdPartiesAuthorizationHandler>();
             services.AddScoped<IApiKeyManager, InMemoryApiKeyManager>();
