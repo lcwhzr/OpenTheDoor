@@ -74,7 +74,8 @@ namespace API.Handlers
             var problemDetails = new UnauthorizedProblemDetails();
 
             //await Response.WriteAsync(JsonSerializer.Serialize(problemDetails.Detail, DefaultJsonSerializerOptions.Options));
-            await Response.WriteAsync(problemDetails.Detail);
+            //await Response.WriteAsync(problemDetails.Detail);
+            await Response.WriteAsync("Unauthorized");
         }
 
         protected override async Task HandleForbiddenAsync(AuthenticationProperties properties)
@@ -83,7 +84,9 @@ namespace API.Handlers
             Response.ContentType = ProblemDetailsContentType;
             var problemDetails = new ForbiddenProblemDetails();
             //await Response.WriteAsync(JsonSerializer.Serialize(problemDetails, DefaultJsonSerializerOptions.Options));
-            await Response.WriteAsync(problemDetails.Detail);
+            //await Response.WriteAsync(problemDetails.Detail);
+            await Response.WriteAsync("Forbidden");
+
         }
     }
 }

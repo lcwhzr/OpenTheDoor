@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Features;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,12 +35,29 @@ namespace API.Controllers
         //    return new ObjectResult(message);
         //}
 
-        [HttpGet("only-services")]
-        public IActionResult OnlyServices()
+        //[HttpGet("only-all-access")]
+        //[Authorize(Policy = Policies.all_access)]
+        //public IActionResult AllAccess()
+        //{
+        //    var message = $"Hello from {nameof(AllAccess)}";
+        //    return new ObjectResult(message);
+        //}
+
+        [HttpGet("only-auth-access")]
+        [Authorize(Policy = Policies.authentication_access)]
+        public IActionResult AuthAccess()
         {
-            var message = $"Hello from {nameof(OnlyServices)}";
+            var message = $"Hello from {nameof(AuthAccess)}";
             return new ObjectResult(message);
         }
+
+        //[HttpGet("known")]
+        //[Authorize(Policy = Policies.authentication_access)]
+        //public IActionResult AuthAccess()
+        //{
+        //    var message = $"Hello from {nameof(AuthAccess)}";
+        //    return new ObjectResult(message);
+        //}
 
         //[HttpGet("only-third-parties")]
         //public IActionResult OnlyThirdParties()

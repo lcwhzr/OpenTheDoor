@@ -26,16 +26,15 @@ namespace API.NewFolder
             //    {
             //        //Roles.Employee
             //    }),
-            //new ApiKey(3, "Management", "06795D9D-A770-44B9-9B27-03C6ABDB1BAE", new DateTime(2019, 01, 01),
-            //    new List<string>
-            //    {
-            //        //Roles.Employee,
-            //        //Roles.Manager
-            //    }),
-            new ApiKey(4, "Service", "FA872702-8787-45DC-89F0-FC1BE900591B", new DateTime(2020, 03, 01),
+            new ApiKey(3, "authentication_access", "06795D9D-A770-44B9-9B27-03C6ABDB1BAE", new DateTime(2019, 01, 01),
                 new List<string>
                 {
-                    Roles.Service
+                    Roles.authentication_access,
+                }),
+            new ApiKey(4, "all_access", "FA872702-8787-45DC-89F0-FC1BE900591B", new DateTime(2020, 03, 01),
+                new List<string>
+                {
+                    Roles.all_access
                 })
         };
 

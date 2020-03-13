@@ -8,7 +8,8 @@ namespace API.Features
     public class Roles
     {
         //public const string Employee = "Employee";
-        public const string Service = "Service";
+        public const string all_access = "all_service";
+        public const string authentication_access = "authentication_access";
         //public const string ThirdParty = "Third Party";
     }
 }
