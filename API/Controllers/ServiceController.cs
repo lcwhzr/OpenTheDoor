@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DoorAPI.Controllers
+namespace API.Controllers
 {
 
     [Route("api/[controller]")]
@@ -27,26 +27,26 @@ namespace DoorAPI.Controllers
             return new ObjectResult(message);
         }
 
-        [HttpGet("only-employees")]
-        public IActionResult OnlyEmployees()
+        //[HttpGet("only-employees")]
+        //public IActionResult OnlyEmployees()
+        //{
+        //    var message = $"Hello from {nameof(OnlyEmployees)}";
+        //    return new ObjectResult(message);
+        //}
+
+        [HttpGet("only-services")]
+        public IActionResult OnlyServices()
         {
-            var message = $"Hello from {nameof(OnlyEmployees)}";
+            var message = $"Hello from {nameof(OnlyServices)}";
             return new ObjectResult(message);
         }
 
-        [HttpGet("only-managers")]
-        public IActionResult OnlyManagers()
-        {
-            var message = $"Hello from {nameof(OnlyManagers)}";
-            return new ObjectResult(message);
-        }
-
-        [HttpGet("only-third-parties")]
-        public IActionResult OnlyThirdParties()
-        {
-            var message = $"Hello from {nameof(OnlyThirdParties)}";
-            return new ObjectResult(message);
-        }
+        //[HttpGet("only-third-parties")]
+        //public IActionResult OnlyThirdParties()
+        //{
+        //    var message = $"Hello from {nameof(OnlyThirdParties)}";
+        //    return new ObjectResult(message);
+        //}
     }
 
 

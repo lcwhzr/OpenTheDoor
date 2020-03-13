@@ -1,10 +1,10 @@
-﻿using DoorAPI.Models;
+﻿using API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DoorAPI.Interfaces
+namespace API.Interfaces
 {
     public interface IApiKeyManager
     {

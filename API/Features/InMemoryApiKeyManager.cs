@@ -1,12 +1,12 @@
-﻿using DoorAPI.Features;
-using DoorAPI.Interfaces;
-using DoorAPI.Models;
+﻿using API.Features;
+using API.Interfaces;
+using API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DoorAPI.NewFolder
+namespace API.NewFolder
 {
     public class InMemoryApiKeyManager : IApiKeyManager
     {

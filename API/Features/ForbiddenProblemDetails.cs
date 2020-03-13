@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace DoorAPI.Features
+namespace API.Features
 {
     public class ForbiddenProblemDetails : ProblemDetails
     {

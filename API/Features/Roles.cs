@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DoorAPI.Features
+namespace API.Features
 {
     public class Roles
     {

@@ -1,6 +1,6 @@
-﻿using DoorAPI.Interfaces;
-using DoorAPI.NewFolder;
-using DoorAPI.Features;
+﻿using API.Interfaces;
+using API.NewFolder;
+using API.Features;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -14,7 +14,7 @@ using System.Security.Claims;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
-namespace DoorAPI.Handlers
+namespace API.Handlers
 {
     public class ApiKeyAuthenticationHandler : AuthenticationHandler<ApiKeyAuthenticationOptions>
     {

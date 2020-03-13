@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DoorAPI.Extensions;
-using DoorAPI.Features;
-using DoorAPI.Handlers;
-using DoorAPI.Interfaces;
-using DoorAPI.NewFolder;
+using API.Extensions;
+using API.Features;
+using API.Handlers;
+using API.Interfaces;
+using API.NewFolder;
 //using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -19,7 +19,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using OpenTheDoor.Models;
 
-namespace DoorAPI
+namespace API
 {
     public class Startup
     {
@@ -46,6 +46,7 @@ namespace DoorAPI
             services.AddSingleton<IAuthorizationHandler, OnlyServicesAuthorizationHandler>();
             //services.AddSingleton<IAuthorizationHandler, OnlyServicesAuthorizationHandler>();
             //services.AddSingleton<IAuthorizationHandler, OnlyThirdPartiesAuthorizationHandler>();
+            services.AddScoped<IApiKeyManager, InMemoryApiKeyManager>();
 
 
 

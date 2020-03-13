@@ -1,4 +1,4 @@
-﻿using DoorAPI.Handlers;
+﻿using API.Handlers;
 using Microsoft.AspNetCore.Authentication;
 using OpenTheDoor.Models;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DoorAPI.Extensions
+namespace API.Extensions
 {
     public static class AuthenticationBuilderExtensions
     {
