@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Interfaces\" />
     <Folder Include="SSO\Interfaces\" />
   </ItemGroup>
 </Project>

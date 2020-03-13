@@ -2,17 +2,14 @@
 
 namespace OpenTheDoor.Models
 {
-    class Service : IEntity
+    class Service : Entity
     {
         private readonly string DomainName;
         private readonly string ApiKey;
         private Scope Scope;
         private bool Active = true;
 
-        public Guid Id { get; set; }
-        public DateTime CreatedAt { get; set; }
-
-        public Service(string domainName, string apiKey)
+        public Service(string domainName, string apiKey): base()
         {
             DomainName = domainName;
             ApiKey = apiKey;

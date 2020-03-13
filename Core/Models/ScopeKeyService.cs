@@ -4,7 +4,7 @@ using OpenTheDoor.Exceptions;
 
 namespace OpenTheDoor.Models
 {
-    class ScopeKeyService : IEntity
+    class ScopeKeyService
     {
         /**
         *  Constants representing key for Scope model in Service model
@@ -13,9 +13,6 @@ namespace OpenTheDoor.Models
         public const string ALL_ACCESS = "all_access";
 
         public static string[] ScopeKeys = { AUTHENTICATION_ACCESS, ALL_ACCESS };
-
-        public Guid Id { get; set; }
-        public DateTime CreatedAt { get; set; }
 
         public static void KeyInScopeKeys(Scope scope)
         {
