@@ -7,39 +7,39 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace OpenTheDoor.SSO
 {
-    public class Repository<TEntity> : IRepository<TEntity>
-        where TEntity : class, IEntity
+    public class Repository<T> : IRepository<T>  where T : class
+
     {
-        private SSOContext _context = null;
-        private DbSet<IEntity> table = null;
+        private readonly SSOContext _context = null;
+        private   DbSet<T> table = null;
 
         public Repository()
         {
             _context = new SSOContext();
-            table = _context.Set<IEntity>();
+            table = _context.Set<T>();
         }
 
 
 
         public async void DeleteAsync(object id)
         {
-            IEntity existing = await table.FindAsync(id);
+            T existing = await table.FindAsync(id);
             table.Remove(existing);
         }
 
-        public async Task<List<IEntity>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync()
         {
             return await table.ToListAsync();
         }
 
-        public async Task<IEntity> GetById(object id)
+        public async Task<T> GetById(object id)
         {
             return await table.FindAsync(id);
         }
 
-        public async Task<EntityEntry<IEntity>> InsertAsync(TEntity entity)
+        public async void InsertAsync(T entity)
         {
-            return await table.AddAsync(entity);
+             await table.AddAsync(entity);
         }
 
         public async void Save()
@@ -47,12 +47,13 @@ namespace OpenTheDoor.SSO
             await _context.SaveChangesAsync();
         }
 
-        public void Update(TEntity entity)
+        public void Update(T entity)
         {
             table.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
 
         }
 
+        
     }
 }

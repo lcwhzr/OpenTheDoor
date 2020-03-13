@@ -6,12 +6,12 @@ using OpenTheDoor.Models;
 
 namespace OpenTheDoor.SSO
 {
-    internal interface IRepository<TEntity> where TEntity : IEntity
+    internal interface IRepository<T> 
     {
-        Task<List<IEntity>> GetAllAsync();
-        Task<IEntity> GetById(object id);
-        Task<EntityEntry<IEntity>> InsertAsync(TEntity entity);
-        void Update(TEntity entity);
+        Task<List<T>> GetAllAsync();
+        Task<T> GetById(object id);
+        void InsertAsync(T obj);
+        void Update(T entity);
         void DeleteAsync(object id);
         void Save();
 
