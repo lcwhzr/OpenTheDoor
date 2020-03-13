@@ -2,14 +2,11 @@
 
 namespace OpenTheDoor.Models
 {
-    class Scope : IEntity
+    class Scope : Entity
     {
         private string Key;
 
-        public Guid Id { get; set; }
-        public DateTime CreatedAt { get; set; }
-
-        public Scope(string scopeKey)
+        public Scope(string scopeKey): base()
         {
             Key = scopeKey;
         }

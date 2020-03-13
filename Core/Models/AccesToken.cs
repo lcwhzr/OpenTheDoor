@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace OpenTheDoor.Models
 {
-    internal class AccesToken : IEntity
+    class AccesToken : Entity
     {
 
         private string Identifier;
@@ -14,11 +14,13 @@ namespace OpenTheDoor.Models
         private List<Scope> Scopes;
         private bool Revoked = false;
 
-        public Guid Id { get; set; }
-        public DateTime CreatedAt { get; set; }
-
-
-        public AccesToken(string identifier, DateTime expiry, string userIdentifier, Service service, List<Scope> scopes)
+        public AccesToken(
+            string identifier,
+            DateTime expiry,
+            string userIdentifier,
+            Service service,
+            List<Scope> scopes
+        ): base()
         {
             Identifier = identifier;
             Expiry = expiry;

@@ -2,17 +2,18 @@
 
 namespace OpenTheDoor.Models
 {
-    class RefreshToken : IEntity
+    class RefreshToken : Entity
     {
         private string Identifier;
         private DateTime Expiry;
         private AccesToken AccesToken;
         private bool Revoked = false;
 
-        public Guid Id { get; set; }
-        public DateTime CreatedAt { get; set; }
-
-        public RefreshToken(string identifier, DateTime expiry, AccesToken accesToken)
+        public RefreshToken(
+            string identifier,
+            DateTime expiry,
+            AccesToken accesToken
+        ): base()
         {
             Identifier = identifier;
             Expiry = expiry;
