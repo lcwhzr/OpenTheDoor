@@ -1,8 +1,13 @@
-﻿namespace OpenTheDoor.Models
+﻿using System;
+
+namespace OpenTheDoor.Models
 {
-    class Scope
+    class Scope : IEntity
     {
         private string Key;
+
+        public Guid Id { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         public Scope(string scopeKey)
         {
