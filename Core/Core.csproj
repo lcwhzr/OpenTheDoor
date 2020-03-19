@@ -22,5 +22,6 @@
 
   <ItemGroup>
     <Folder Include="SSO\Interfaces\" />
+    <Folder Include="Managers\" />
   </ItemGroup>
 </Project>
