@@ -1,28 +1,30 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Sqlite;
 using OpenTheDoor.Models;
 
 namespace OpenTheDoor.SSO
 {
     class SSOContext : DbContext
     {
+        private string connectionString;
         public DbSet<Service> Services { get; set; }
         public DbSet<AccesToken> AccesToken { get; set; }
         public DbSet<RefreshToken> RefreshToken { get; set; }
         public DbSet<Scope> Scope { get; set; }
         public DbSet<ScopeKeyService> ScopeKeyService { get; set; }
 
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            //options.UseSqlServer();
+            options
+            .UseSqlite(connectionString, providerOptions => providerOptions.CommandTimeout(60));
+     
         }
 
-        public SSOContext()
+        public SSOContext(string connectionString)
         {
+            this.connectionString = connectionString;
 
         }
-
-      
-
-
     }
 }
