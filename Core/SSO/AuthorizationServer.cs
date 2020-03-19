@@ -2,13 +2,18 @@
 
 namespace OpenTheDoor.SSO {
 
-    public class AuthorizationServer { 
-        private string connectionStrings; 
-        public AuthorizationServer(string connectionStrings) { 
-            this.connectionStrings = connectionStrings; 
+    public  class AuthorizationServer { 
+        private string connectionString;
+        private SSOContext sSOContext;
+
+
+        public AuthorizationServer(string connectionString) { 
+            this.connectionString = connectionString;
         }
+
         public bool addConfig() {
-            createDatabase();             
+            sSOContext = new SSOContext(connectionString);
+
             //check if we can access to the database             
             //call fonction the database,             
             //if ok call fonction to create table from models              
@@ -22,3 +27,5 @@ namespace OpenTheDoor.SSO {
         }
     } 
 }
+
+

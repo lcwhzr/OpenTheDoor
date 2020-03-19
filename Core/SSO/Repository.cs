@@ -12,10 +12,11 @@ namespace OpenTheDoor.SSO
     {
         private readonly SSOContext _context = null;
         private   DbSet<T> table = null;
+        private string connectionString;
 
         public Repository()
         {
-            _context = new SSOContext();
+            _context = new SSOContext(connectionString);
             table = _context.Set<T>();
         }
 
