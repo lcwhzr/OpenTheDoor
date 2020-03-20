@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Core.Models
 {
-    public class AccesToken : Entity
+    public class AccessToken : Entity
     {
         private string Identifier;
         private DateTime Expiry;
@@ -12,9 +12,9 @@ namespace Core.Models
         private List<Scope> Scopes;
         private bool Revoked = false;
 
-        public AccesToken() { }
+        public AccessToken() { }
 
-        public AccesToken(
+        public AccessToken(
             string identifier,
             DateTime expiry,
             string userIdentifier,

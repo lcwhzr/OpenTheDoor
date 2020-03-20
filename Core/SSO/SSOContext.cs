@@ -17,7 +17,7 @@ namespace Core.SSO
 
         public string connection;
         public DbSet<Service> Services { get; set; }
-        public DbSet<AccesToken> AccesToken { get; set; }
+        public DbSet<AccessToken> AccessToken { get; set; }
         public DbSet<RefreshToken> RefreshToken { get; set; }
         public DbSet<Scope> Scope { get; set; }
 

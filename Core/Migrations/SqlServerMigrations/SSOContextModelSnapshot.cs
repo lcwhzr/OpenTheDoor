@@ -15,7 +15,7 @@ namespace Core.Migrations.SqlServerMigrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.2");
 
-            modelBuilder.Entity("OpenTheDoor.Models.AccesToken", b =>
+            modelBuilder.Entity("OpenTheDoor.Models.AccessToken", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -23,7 +23,7 @@ namespace Core.Migrations.SqlServerMigrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AccesToken");
+                    b.ToTable("AccessToken");
                 });
 
             modelBuilder.Entity("OpenTheDoor.Models.RefreshToken", b =>

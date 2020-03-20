@@ -5,40 +5,40 @@ using Core.SSO;
 
 namespace Core.Managers
 {
-    public class AccesTokensManager
+    public class AccessTokensManager
     {
-        private Repository<AccesToken> accesTokenRepository;
+        private Repository<AccessToken> accessTokenRepository;
 
-        public AccesTokensManager()
+        public AccessTokensManager()
         {
         }
 
-        public void AddAccesToken(AccesToken accesToken)
+        public void AddAccessToken(AccessToken accessToken)
         {
-            accesTokenRepository.InsertAsync(accesToken);
-            accesTokenRepository.Save();
+            accessTokenRepository.InsertAsync(accessToken);
+            accessTokenRepository.Save();
         }
 
-        public async Task<List<AccesToken>> GetAccesTokensAsync()
+        public async Task<List<AccessToken>> GetAccessTokensAsync()
         {
-            List<AccesToken> accesTokens = await accesTokenRepository.GetAllAsync();
-            accesTokenRepository.Save();
+            List<AccessToken> accessTokens = await accessTokenRepository.GetAllAsync();
+            accessTokenRepository.Save();
 
-            return accesTokens;
+            return accessTokens;
         }
 
-        public void DeleteAccesTokenAsync(object id)
+        public void DeleteAccessTokenAsync(object id)
         {
-            accesTokenRepository.DeleteAsync(id);
-            accesTokenRepository.Save();
+            accessTokenRepository.DeleteAsync(id);
+            accessTokenRepository.Save();
         }
 
-        public async Task<AccesToken> GetAccesTokenById(object id)
+        public async Task<AccessToken> GetAccessTokenById(object id)
         {
-            AccesToken accesToken = await accesTokenRepository.GetById(id);
-            accesTokenRepository.Save();
+            AccessToken accessToken = await accessTokenRepository.GetById(id);
+            accessTokenRepository.Save();
 
-            return accesToken;
+            return accessToken;
         }
     }
 }

@@ -10,11 +10,11 @@ namespace Core.Factories
         public const int ACCESS_TOKEN_EXPIRY = 1300819380;
         public const string PRIVATE_KEY = "../public/openthedoor.p12";
 
-        public AccesToken Create(string userIdentifier, string userEmail, Service service, List<Scope> scopes)
+        public AccessToken Create(string userIdentifier, string userEmail, Service service, List<Scope> scopes)
         {
             string token = AccessTokenGenerate(userIdentifier, userEmail);
 
-            return new AccesToken(
+            return new AccessToken(
                 token,
                 System.DateTime.Now.Date.AddHours(1),
                 userIdentifier,

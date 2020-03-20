@@ -7,7 +7,7 @@ namespace Core.Migrations.SqlServerMigrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AccesToken",
+                name: "AccessToken",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -15,7 +15,7 @@ namespace Core.Migrations.SqlServerMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AccesToken", x => x.Id);
+                    table.PrimaryKey("PK_AccessToken", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -58,7 +58,7 @@ namespace Core.Migrations.SqlServerMigrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AccesToken");
+                name: "AccessToken");
 
             migrationBuilder.DropTable(
                 name: "RefreshToken");

@@ -8,7 +8,7 @@ namespace Core.Services
     public class AccessTokenCreator
     {
         private AccessTokenFactory _accessTokenFactory;
-        private AccesTokensManager _accessTokensManager;
+        private AccessTokensManager _accessTokensManager;
 
         public AccessTokenFactory AccessTokenFactory
         {
@@ -18,7 +18,7 @@ namespace Core.Services
             }
         }
 
-        public AccesTokensManager AccessTokensManager
+        public AccessTokensManager AccessTokensManager
         {
             set
             {
@@ -26,16 +26,16 @@ namespace Core.Services
             }
         }
 
-        public AccesToken Create(string userIdentifier, string userEmail, Service service, List<Scope> scopes)
+        public AccessToken Create(string userIdentifier, string userEmail, Service service, List<Scope> scopes)
         {
-            AccesToken accessToken = _accessTokenFactory.Create(
+            AccessToken accessToken = _accessTokenFactory.Create(
                 userIdentifier,
                 userEmail,
                 service,
                 scopes
             );
 
-            _accessTokensManager.AddAccesToken(accessToken);
+            _accessTokensManager.AddAccessToken(accessToken);
 
             return accessToken;
         }

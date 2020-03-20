@@ -6,7 +6,7 @@ namespace Core.Models
     {
         private string Identifier;
         private DateTime Expiry;
-        private AccesToken AccesToken;
+        private AccessToken AccessToken;
         private bool Revoked = false;
 
         public RefreshToken() { }
@@ -14,12 +14,12 @@ namespace Core.Models
         public RefreshToken(
             string identifier,
             DateTime expiry,
-            AccesToken accesToken
+            AccessToken accessToken
         ): base()
         {
             Identifier = identifier;
             Expiry = expiry;
-            AccesToken = accesToken;
+            AccessToken = accessToken;
         }
 
         public string GetIdentifier()
@@ -32,9 +32,9 @@ namespace Core.Models
             return Expiry;
         }
 
-        public AccesToken GetAccessToken()
+        public AccessToken GetAccessToken()
         {
-            return AccesToken;
+            return AccessToken;
         }
 
         public bool IsRevoked()
