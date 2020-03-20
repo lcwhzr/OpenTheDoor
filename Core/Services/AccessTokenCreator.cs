@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Core.Exceptions;
 using Core.Factories;
 using Core.Managers;
 using Core.Models;
@@ -9,6 +11,8 @@ namespace Core.Services
     {
         private AccessTokenFactory _accessTokenFactory;
         private AccessTokensManager _accessTokensManager;
+        private ScopesManager _scopesManager;
+        private ServicesManager _servicesManager;
 
         public AccessTokenFactory AccessTokenFactory
         {
@@ -26,8 +30,45 @@ namespace Core.Services
             }
         }
 
-        public AccessToken Create(string userIdentifier, string userEmail, Service service, List<Scope> scopes)
+        public ScopesManager ScopesManager
         {
+            set
+            {
+                _scopesManager = value;
+            }
+        }
+
+        public ServicesManager ServicesManager
+        {
+            set
+            {
+                _servicesManager = value;
+            }
+        }
+
+        public async Task<AccessToken> Create(string userIdentifier, string userEmail, string serviceId, List<int> scopeIds)
+        {
+            List<Scope> scopes;
+            Service service;
+            
+            try
+            {
+                scopes = await _scopesManager.GetScopesByIds(scopeIds);
+            }
+            catch (InvalidScopeServiceException exception)
+            {
+                throw exception;
+            }
+
+            try
+            {
+                service = await _servicesManager.GetServiceById(serviceId);
+            }
+            catch (ServiceNotFoundException exception)
+            {
+                throw exception;
+            }
+
             AccessToken accessToken = _accessTokenFactory.Create(
                 userIdentifier,
                 userEmail,
