@@ -2,14 +2,12 @@
 
 namespace OpenTheDoor.Core.SSO
 {
-
     public  class AuthorizationServer
     { 
         private string connectionString;
         private SSOContext sSOContext;
 
-        public AuthorizationServer(string connectionString)
-        { 
+        public AuthorizationServer(string connectionString) { 
             this.connectionString = connectionString;
         }
 

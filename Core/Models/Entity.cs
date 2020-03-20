@@ -4,7 +4,6 @@ namespace OpenTheDoor.Core.Models
 {
     abstract public class Entity
     {
-
         public int Id { get; set; }
         private DateTime CreatedAt;
         private DateTime UpdatedAt;

@@ -34,7 +34,7 @@ namespace OpenTheDoor.Core.Managers
               serviceRepository.Save();
         }
 
-        async Task<Service> GetServiceById(object id)
+        public async Task<Service> GetServiceById(object id)
         {
             Service service =  await serviceRepository.GetById(id);
             serviceRepository.Save();
