@@ -13,7 +13,7 @@ namespace API.Controllers
     [ApiController]
     public class ScopeController : ControllerBase
     {
-    
+
         [HttpGet("create")]
         [Authorize(Policy = Policies.all_access)]
         public IActionResult CreateScope()
@@ -85,3 +85,4 @@ namespace API.Controllers
 
 
     }
+}
