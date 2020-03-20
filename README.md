@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img src="https://cdn-biiinge.konbini.com/files/2016/08/hodor-feat.jpg" alt="Logo" width=72 height=72>
+    <img src="https://cdn-biiinge.konbini.com/files/2016/08/hodor-feat.jpg" alt="Logo" width=820 height=430>
   </a>
 
   <h3 align="center">OpenTheDoor</h3>
