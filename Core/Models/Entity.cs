@@ -5,8 +5,8 @@ namespace Core.Models
     abstract public class Entity
     {
         public int Id { get; set; }
-        private DateTime CreatedAt;
-        private DateTime UpdatedAt;
+        public DateTime CreatedAt { get; internal set; }
+        public DateTime UpdatedAt { get; internal set; }
 
         public Entity()
         {

@@ -4,9 +4,9 @@ namespace Core.Models
 {
     public class RefreshToken : Entity
     {
-        private string Identifier;
-        private DateTime Expiry;
-        private AccessToken AccessToken;
+        public string Identifier { get; internal set; }
+        public DateTime Expiry { get; internal set; }
+        public AccessToken AccessToken { get; internal set; }
         private bool Revoked = false;
 
         public RefreshToken() { }

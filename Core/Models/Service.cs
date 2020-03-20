@@ -4,9 +4,9 @@ namespace Core.Models
 {
     public class Service : Entity
     {
-        private readonly string DomainName;
-        private readonly string ApiKey;
-        private Scope Scope;
+        public string DomainName { get; internal set; }
+        public string ApiKey { get; internal set; }
+        public Scope Scope { get; internal set; }
         private bool Active = true;
 
         public Service() { }

@@ -5,11 +5,11 @@ namespace Core.Models
 {
     public class AccessToken : Entity
     {
-        private string Identifier;
-        private DateTime Expiry;
-        private string UserIdentifier;
-        private Service Service;
-        private List<Scope> Scopes;
+        public string Identifier { get; internal set; }
+        public DateTime Expiry { get; internal set; }
+        public string UserIdentifier { get; internal set; }
+        public Service Service { get; internal set; }
+        public List<Scope> Scopes { get; internal set; }
         private bool Revoked = false;
 
         public AccessToken() { }
