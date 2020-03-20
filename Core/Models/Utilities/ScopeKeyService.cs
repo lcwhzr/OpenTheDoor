@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using OpenTheDoor.Exceptions;
+using OpenTheDoor.Core.Exceptions;
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
     public class ScopeKeyService
     {

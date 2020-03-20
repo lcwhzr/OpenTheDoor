@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenTheDoor.Exceptions
+namespace OpenTheDoor.Core.Exceptions
 {
     [Serializable]
     class InvalidScopeServiceException : Exception
@@ -8,7 +8,6 @@ namespace OpenTheDoor.Exceptions
         public InvalidScopeServiceException(string invalidScopeKey)
             : base(String.Format("Invalid Scope Key: {0}", invalidScopeKey))
         {
-
         }
     }
 }

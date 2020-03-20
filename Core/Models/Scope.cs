@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
     public class Scope : Entity
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace OpenTheDoor.SSO {
-
-    public  class AuthorizationServer { 
+namespace OpenTheDoor.Core.SSO
+{
+    public  class AuthorizationServer
+    { 
         private string connectionString;
         private SSOContext sSOContext;
-
 
         public AuthorizationServer(string connectionString) { 
             this.connectionString = connectionString;
@@ -20,6 +20,7 @@ namespace OpenTheDoor.SSO {
             return true;             
             //else retrun false          
         }
+
         private  bool createDatabase()         
         {             
             //if database is here or table are here with model             

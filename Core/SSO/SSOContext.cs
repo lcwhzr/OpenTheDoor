@@ -1,25 +1,25 @@
-﻿using Microsoft.Data.Sqlite;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
-using OpenTheDoor.Models;
+using OpenTheDoor.Core.Models;
 
-namespace OpenTheDoor.SSO
+namespace OpenTheDoor.Core.SSO
 {
     public class SSOContext : DbContext
     {
-        public SSOContext() 
+        public SSOContext()
         {
         }
 
         public SSOContext(DbContextOptions<SSOContext> options) : base(options)
         {
         }
+
         public string connection;
         public DbSet<Service> Services { get; set; }
         public DbSet<AccesToken> AccesToken { get; set; }
         public DbSet<RefreshToken> RefreshToken { get; set; }
         public DbSet<Scope> Scope { get; set; }
-
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,13 +31,11 @@ namespace OpenTheDoor.SSO
             var connection = new SqliteConnection(connectionString);
 
             optionsBuilder.UseSqlite(connection);
-
         }
 
         public SSOContext(string connection)
         {
             this.connection = connection;
-
         }
     }
 }

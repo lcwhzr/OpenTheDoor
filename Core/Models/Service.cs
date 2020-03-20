@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
     public class Service : Entity
     {
@@ -10,6 +10,7 @@ namespace OpenTheDoor.Models
         private bool Active = true;
 
         public Service() { }
+
         public Service(string domainName, string apiKey): base()
         {
             DomainName = domainName;
