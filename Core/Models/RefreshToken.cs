@@ -2,7 +2,7 @@
 
 namespace OpenTheDoor.Models
 {
-    class RefreshToken : Entity
+    public class RefreshToken : Entity
     {
         private string Identifier;
         private DateTime Expiry;

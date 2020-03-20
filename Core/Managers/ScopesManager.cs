@@ -15,7 +15,7 @@ namespace Core.Managers
 
       
 
-        void AddService(Scope scope)
+        void AddScope(Scope scope)
         {
             scopeRepository.InsertAsync(scope);
             scopeRepository.Save();
@@ -24,7 +24,7 @@ namespace Core.Managers
 
         }
 
-        async Task<List<Scope>> GetSScopsAsync()
+        async Task<List<Scope>> GetScopsAsync()
         {
             List<Scope> scops = await scopeRepository.GetAllAsync();
             scopeRepository.Save();
@@ -32,7 +32,7 @@ namespace Core.Managers
 
         }
 
-        void DeleteServiceAsync(object id)
+        void DeleteScopeAsync(object id)
         {
             scopeRepository.DeleteAsync(id);
             scopeRepository.Save();
@@ -41,7 +41,7 @@ namespace Core.Managers
 
 
 
-        async Task<Scope> GetServiceById(object id)
+        async Task<Scope> GetScopeyId(object id)
         {
             Scope scope = await scopeRepository.GetById(id);
             scopeRepository.Save();

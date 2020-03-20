@@ -4,7 +4,7 @@ using OpenTheDoor.Exceptions;
 
 namespace OpenTheDoor.Models
 {
-    class ScopeKeyService
+    public class ScopeKeyService
     {
         /**
         *  Constants representing key for Scope model in Service model
