@@ -26,5 +26,6 @@
   <ItemGroup>
     <Folder Include="SSO\Interfaces\" />
     <Folder Include="Managers\" />
+    <Folder Include="Models\Utilities\" />
   </ItemGroup>
 </Project>

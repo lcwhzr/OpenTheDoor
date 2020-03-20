@@ -3,21 +3,22 @@ namespace OpenTheDoor.Models
 {
     abstract public class Entity
     {
-        private Guid Id;
+
+        public int Id { get; set; }
         private DateTime CreatedAt;
         private DateTime UpdatedAt;
 
         public Entity()
         {
-            Id = Guid.NewGuid();
+            //Id = Guid.NewGuid();
             CreatedAt = new DateTime();
             UpdatedAt = new DateTime();
         }
 
-        public Guid GetId()
-        {
-            return Id;
-        }
+        //public Guid GetId()
+        //{
+        //    return Id;
+        //}
 
         public DateTime GetCreatedAt()
         {

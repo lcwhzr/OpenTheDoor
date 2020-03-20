@@ -14,10 +14,6 @@ namespace Core.Managers
         {
         }
 
-
-
-
-
         void AddRefreshToken(RefreshToken refreshToken)
         {
             refreshTokenRepository.InsertAsync(refreshToken);

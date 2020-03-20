@@ -6,6 +6,8 @@ namespace OpenTheDoor.Models
     {
         private string Key;
 
+        public Scope() { }
+
         public Scope(string scopeKey): base()
         {
             Key = scopeKey;

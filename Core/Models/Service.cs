@@ -9,6 +9,7 @@ namespace OpenTheDoor.Models
         private Scope Scope;
         private bool Active = true;
 
+        public Service() { }
         public Service(string domainName, string apiKey): base()
         {
             DomainName = domainName;

@@ -9,6 +9,8 @@ namespace OpenTheDoor.Models
         private AccesToken AccesToken;
         private bool Revoked = false;
 
+        public RefreshToken() { }
+
         public RefreshToken(
             string identifier,
             DateTime expiry,

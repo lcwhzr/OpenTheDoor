@@ -7,6 +7,9 @@ namespace OpenTheDoor.SSO
 {
     public class SSOContext : DbContext
     {
+        public SSOContext() 
+        {
+        }
 
         public SSOContext(DbContextOptions<SSOContext> options) : base(options)
         {
@@ -16,7 +19,6 @@ namespace OpenTheDoor.SSO
         public DbSet<AccesToken> AccesToken { get; set; }
         public DbSet<RefreshToken> RefreshToken { get; set; }
         public DbSet<Scope> Scope { get; set; }
-        public DbSet<ScopeKeyService> ScopeKeyService { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
