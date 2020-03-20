@@ -14,11 +14,11 @@ namespace Core.Models
 
         public static string[] ScopeKeys = { AUTHENTICATION_ACCESS, ALL_ACCESS };
 
-        public static void KeyInScopeKeys(Scope scope)
+        public static void KeyInScopeKeys(string scopeKey)
         {
-            if (!ScopeKeys.Contains(scope.GetKey()))
+            if (!ScopeKeys.Contains(scopeKey))
             {
-                throw new InvalidScopeServiceException(scope.GetKey());
+                throw new InvalidScopeServiceException(scopeKey);
             }
         }
     }
