@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OpenTheDoor.SSO;
+using Core.SSO;
 
 namespace Core.Migrations.SqlServerMigrations
 {

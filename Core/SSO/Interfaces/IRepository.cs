@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using OpenTheDoor.Core.Models;
+using Core.Models;
 
-namespace OpenTheDoor.Core.SSO
+namespace Core.SSO
 {
     internal interface IRepository<T> 
     {

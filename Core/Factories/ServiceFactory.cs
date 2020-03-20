@@ -1,8 +1,8 @@
 ﻿using System;
-using OpenTheDoor.Core.Models;
-using OpenTheDoor.Core.Exceptions;
+using Core.Models;
+using Core.Exceptions;
 
-namespace OpenTheDoor.Core.Factories
+namespace Core.Factories
 {
     class ServiceFactory
     {

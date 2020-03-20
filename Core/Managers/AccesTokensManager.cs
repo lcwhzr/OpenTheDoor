@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using OpenTheDoor.Models;
-using OpenTheDoor.SSO;
+using Core.Models;
+using Core.SSO;
 
 namespace Core.Managers
 {
