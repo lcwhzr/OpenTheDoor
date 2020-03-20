@@ -1,8 +1,5 @@
-﻿//using Jose;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Core.SSO;
 
 namespace Core.Models
 {
@@ -25,17 +22,6 @@ namespace Core.Models
             List<Scope> scopes
         ): base()
         {
-            /*
-                var payload = new Dictionary<string, object>()
-                {
-                    { "sub", "mr.x@contoso.com" },
-                    { "exp", 1300819380 }
-                };
-
-                string token = JWT.Encode(payload, null, JwsAlgorithm.none);
-             
-             
-             */
             Identifier = identifier;
             Expiry = expiry;
             UserIdentifier = userIdentifier;
