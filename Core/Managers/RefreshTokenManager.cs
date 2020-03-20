@@ -33,7 +33,7 @@ namespace Core.Managers
             refreshTokenRepository.Save();
         }
 
-        public async Task<RefreshToken> GetRefreshTokenById(object id)
+        public async Task<RefreshToken> GetrefreshTokenById(object id)
         {
             RefreshToken refreshToken = await refreshTokenRepository.GetById(id);
             refreshTokenRepository.Save();
