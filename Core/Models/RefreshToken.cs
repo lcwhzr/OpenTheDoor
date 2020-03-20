@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
-    class RefreshToken : Entity
+    public class RefreshToken : Entity
     {
         private string Identifier;
         private DateTime Expiry;

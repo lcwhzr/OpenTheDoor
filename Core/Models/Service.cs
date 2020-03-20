@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
-    class Service : Entity
+    public class Service : Entity
     {
         private readonly string DomainName;
         private readonly string ApiKey;

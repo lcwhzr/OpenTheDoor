@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
-using OpenTheDoor.Models;
+using OpenTheDoor.Core.Models;
 
-namespace OpenTheDoor.SSO
+namespace OpenTheDoor.Core.SSO
 {
     class SSOContext : DbContext
     {

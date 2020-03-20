@@ -1,10 +1,9 @@
 ﻿using System;
-using OpenTheDoor.Models;
-using OpenTheDoor.Exceptions;
+using OpenTheDoor.Core.Models;
 
-namespace OpenTheDoor.Factories
+namespace OpenTheDoor.Core.Factories
 {
-    class ServiceFactory
+    public class ServiceFactory
     {
         public Service CreateService(string domainName, Scope scope = null)
         {
@@ -12,15 +11,6 @@ namespace OpenTheDoor.Factories
 
             if (null != scope)
             {
-                try
-                {
-                    ScopeKeyService.KeyInScopeKeys(scope);
-                }
-                catch(InvalidScopeServiceException exception)
-                {
-                    throw exception;
-                }
-
                 service.SetScope(scope);
             }
 

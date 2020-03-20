@@ -1,7 +1,8 @@
 ﻿using System;
-namespace OpenTheDoor.Models
+
+namespace OpenTheDoor.Core.Models
 {
-    abstract class Entity
+    public abstract class Entity
     {
         private Guid Id;
         private DateTime CreatedAt;

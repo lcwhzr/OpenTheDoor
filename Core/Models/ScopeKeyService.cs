@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using OpenTheDoor.Exceptions;
+using OpenTheDoor.Core.Exceptions;
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
-    class ScopeKeyService
+    public class ScopeKeyService
     {
         /**
         *  Constants representing key for Scope model in Service model
@@ -14,11 +14,11 @@ namespace OpenTheDoor.Models
 
         public static string[] ScopeKeys = { AUTHENTICATION_ACCESS, ALL_ACCESS };
 
-        public static void KeyInScopeKeys(Scope scope)
+        public static void KeyInScopeKeys(string scopeKey)
         {
-            if (!ScopeKeys.Contains(scope.GetKey()))
+            if (!ScopeKeys.Contains(scopeKey))
             {
-                throw new InvalidScopeServiceException(scope.GetKey());
+                throw new InvalidScopeServiceException(scopeKey);
             }
         }
     }

@@ -24,5 +24,9 @@
   <ItemGroup>
     <Folder Include="SSO\Interfaces\" />
     <Folder Include="Managers\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Factories\ScopeFactory.cs" />
   </ItemGroup>
 </Project>

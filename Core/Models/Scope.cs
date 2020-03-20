@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
-    class Scope : Entity
+    public class Scope : Entity
     {
         private string Key;
 

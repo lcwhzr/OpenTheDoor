@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
-    class AccesToken : Entity
+    public class AccesToken : Entity
     {
 
         private string Identifier;

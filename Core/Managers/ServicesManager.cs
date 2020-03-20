@@ -1,52 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using OpenTheDoor.Models;
-using OpenTheDoor.SSO;
+using OpenTheDoor.Core.Models;
+using OpenTheDoor.Core.SSO;
 
-namespace Core.Managers
+namespace OpenTheDoor.Core.Managers
 {
     public class ServicesManager
     {
         private Repository<Service> serviceRepository;
+
         public ServicesManager()
         {
-            
-
         }
 
-        void AddService(Service service)
+        public void AddService(Service service)
         {
             serviceRepository.InsertAsync(service);
             serviceRepository.Save();
-
-
-
         }
 
-        async Task<List<Service>> GetServicesAsync()
+        public async Task<List<Service>> GetServicesAsync()
         {
             List<Service> services = await serviceRepository.GetAllAsync();
             serviceRepository.Save();
-            return services;
 
+            return services;
         }
 
-        void DeleteServiceAsync(object id)
+        public void DeleteServiceAsync(object id)
         {
               serviceRepository.DeleteAsync(id);
               serviceRepository.Save();
-
         }
 
-       
-
-        async Task<Service> GetServiceById(object id)
+        public async Task<Service> GetServiceById(object id)
         {
             Service service =  await serviceRepository.GetById(id);
             serviceRepository.Save();
-            return service;
 
+            return service;
         }
     }
 
