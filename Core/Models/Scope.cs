@@ -2,9 +2,11 @@
 
 namespace OpenTheDoor.Models
 {
-    class Scope : Entity
+    public class Scope : Entity
     {
         private string Key;
+
+        public Scope() { }
 
         public Scope(string scopeKey): base()
         {

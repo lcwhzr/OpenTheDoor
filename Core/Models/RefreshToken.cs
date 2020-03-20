@@ -2,12 +2,14 @@
 
 namespace OpenTheDoor.Models
 {
-    class RefreshToken : Entity
+    public class RefreshToken : Entity
     {
         private string Identifier;
         private DateTime Expiry;
         private AccesToken AccesToken;
         private bool Revoked = false;
+
+        public RefreshToken() { }
 
         public RefreshToken(
             string identifier,

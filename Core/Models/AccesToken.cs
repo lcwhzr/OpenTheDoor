@@ -1,11 +1,12 @@
 ﻿//using Jose;
 using System;
 using System.Collections.Generic;
-
+using Microsoft.EntityFrameworkCore;
+using OpenTheDoor.SSO;
 
 namespace OpenTheDoor.Models
 {
-    class AccesToken : Entity
+    public class AccesToken : Entity
     {
 
         private string Identifier;
@@ -14,6 +15,8 @@ namespace OpenTheDoor.Models
         private Service Service;
         private List<Scope> Scopes;
         private bool Revoked = false;
+
+        public AccesToken() { }
 
         public AccesToken(
             string identifier,

@@ -14,6 +14,8 @@
     <PackageReference Include="xunit.assert" Version="2.4.1" />
     <PackageReference Include="xunit.core" Version="2.4.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,5 +27,6 @@
   <ItemGroup>
     <Folder Include="SSO\Interfaces\" />
     <Folder Include="Managers\" />
+    <Folder Include="Models\Utilities\" />
   </ItemGroup>
 </Project>

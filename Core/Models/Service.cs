@@ -2,13 +2,14 @@
 
 namespace OpenTheDoor.Models
 {
-    class Service : Entity
+    public class Service : Entity
     {
         private readonly string DomainName;
         private readonly string ApiKey;
         private Scope Scope;
         private bool Active = true;
 
+        public Service() { }
         public Service(string domainName, string apiKey): base()
         {
             DomainName = domainName;
