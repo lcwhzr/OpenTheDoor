@@ -1,7 +1,7 @@
-﻿using OpenTheDoor.Core.Exceptions;
-using OpenTheDoor.Core.Factories;
-using OpenTheDoor.Core.Managers;
-using OpenTheDoor.Core.Models;
+﻿using Core.Exceptions;
+using Core.Factories;
+using Core.Managers;
+using Core.Models;
 
 namespace Core.Services
 {

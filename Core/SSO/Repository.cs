@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace OpenTheDoor.Core.SSO
+namespace Core.SSO
 {
     public class Repository<T> : IRepository<T>  where T : class
     {

@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
-namespace OpenTheDoor.Core.Models
+namespace Core.Models
 {
     public class AccesToken : Entity
     {
-
         private string Identifier;
         private DateTime Expiry;
         private string UserIdentifier;

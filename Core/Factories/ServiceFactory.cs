@@ -1,7 +1,7 @@
 ﻿using System;
-using OpenTheDoor.Core.Models;
+using Core.Models;
 
-namespace OpenTheDoor.Core.Factories
+namespace Core.Factories
 {
     public class ServiceFactory
     {

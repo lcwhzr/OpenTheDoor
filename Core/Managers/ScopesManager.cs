@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using OpenTheDoor.Core.Models;
-using OpenTheDoor.Core.SSO;
+using Core.Models;
+using Core.SSO;
 
-namespace OpenTheDoor.Core.Managers
+namespace Core.Managers
 {
     public class ScopesManager
     {
