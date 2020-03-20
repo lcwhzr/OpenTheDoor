@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img src="https://via.placeholder.com/72" alt="Logo" width=72 height=72>
+    <img src="https://cdn-biiinge.konbini.com/files/2016/08/hodor-feat.jpg" alt="Logo" width=72 height=72>
   </a>
 
   <h3 align="center">OpenTheDoor</h3>
@@ -19,9 +19,8 @@
 
 - [Quick start](#quick-start)
 - [Status](#status)
-- [What's included](#whats-included)
+- [Folder Architecture](#folder-architecture)
 - [Bugs and feature requests](#bugs-and-feature-requests)
-- [Contributing](#contributing)
 - [Creators](#creators)
 - [Copyright and license](#copyright-and-license)
 
@@ -38,9 +37,7 @@ Some text
 
 Here goes all the budgets
 
-## What's included
-
-Some text
+## Folder Architecture
 
 ```text
 folder1/
@@ -71,7 +68,7 @@ folder1/
 
 - <https://github.com/JohanSing>
 
-**Dinesh Salhotra*
+**Dinesh Salhotra**
 
 - <https://github.com/dinesh1996>
 
@@ -83,9 +80,6 @@ folder1/
 
 - <https://github.com/sencuba>
 
-## Thanks
-
-Some Text
 
 ## Copyright and license
 
