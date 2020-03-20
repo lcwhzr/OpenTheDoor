@@ -11,51 +11,51 @@ namespace API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class ServiceController : ControllerBase
+    public class RefreshTokenController : ControllerBase
     {
-    
+
         [HttpGet("create")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult CreateService()
+        public IActionResult CreateRefreshToken()
         {
 
             //Service method call
             //ex : 
-            //Service.CreateService();
+            //Service.CreateRefreshToken();
 
 
 
-            var message = $"Hello from {nameof(CreateService)}";
+            var message = $"Hello from {nameof(CreateRefreshToken)}";
             return new ObjectResult(message);
         }
 
-        [HttpGet("delete")]
+        [HttpGet("revoke")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult DeleteService()
+        public IActionResult RevokeRefreshToken()
         {
 
             //Service method call
             //ex : 
-            //Service.DeleteService();
+            //Service.RevokeRefreshToken();
 
 
 
-            var message = $"Hello from {nameof(DeleteService)}";
+            var message = $"Hello from {nameof(RevokeRefreshToken)}";
             return new ObjectResult(message);
         }
 
-        [HttpGet("update")]
+        [HttpGet("check")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult UpdateService()
+        public IActionResult CheckRefreshToken()
         {
 
             //Service method call
             //ex : 
-            //Service.UpdateService();
+            //Service.CheckRefreshToken();
 
 
 
-            var message = $"Hello from {nameof(UpdateService)}";
+            var message = $"Hello from {nameof(CheckRefreshToken)}";
             return new ObjectResult(message);
         }
 
@@ -85,3 +85,4 @@ namespace API.Controllers
 
 
     }
+}

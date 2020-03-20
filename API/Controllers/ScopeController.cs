@@ -11,51 +11,51 @@ namespace API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class ServiceController : ControllerBase
+    public class ScopeController : ControllerBase
     {
     
         [HttpGet("create")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult CreateService()
+        public IActionResult CreateScope()
         {
 
             //Service method call
             //ex : 
-            //Service.CreateService();
+            //Service.CreateScope();
 
 
 
-            var message = $"Hello from {nameof(CreateService)}";
+            var message = $"Hello from {nameof(CreateScope)}";
             return new ObjectResult(message);
         }
 
         [HttpGet("delete")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult DeleteService()
+        public IActionResult DeleteScope()
         {
 
             //Service method call
             //ex : 
-            //Service.DeleteService();
+            //Service.DeleteScope();
 
 
 
-            var message = $"Hello from {nameof(DeleteService)}";
+            var message = $"Hello from {nameof(DeleteScope)}";
             return new ObjectResult(message);
         }
 
         [HttpGet("update")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult UpdateService()
+        public IActionResult UpdateScope()
         {
 
             //Service method call
             //ex : 
-            //Service.UpdateService();
+            //Service.UpdateScope();
 
 
 
-            var message = $"Hello from {nameof(UpdateService)}";
+            var message = $"Hello from {nameof(UpdateScope)}";
             return new ObjectResult(message);
         }
 

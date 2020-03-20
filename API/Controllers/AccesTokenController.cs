@@ -11,51 +11,51 @@ namespace API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class ServiceController : ControllerBase
+    public class AccesTokenController : ControllerBase
     {
-    
+
         [HttpGet("create")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult CreateService()
+        public IActionResult CreateAccesToken()
         {
 
             //Service method call
             //ex : 
-            //Service.CreateService();
+            //Service.CreateAccesToken();
 
 
 
-            var message = $"Hello from {nameof(CreateService)}";
+            var message = $"Hello from {nameof(CreateAccesToken)}";
             return new ObjectResult(message);
         }
 
-        [HttpGet("delete")]
+        [HttpGet("revoke")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult DeleteService()
+        public IActionResult RevokeAccesToken()
         {
 
             //Service method call
             //ex : 
-            //Service.DeleteService();
+            //Service.RevokeAccesToken();
 
 
 
-            var message = $"Hello from {nameof(DeleteService)}";
+            var message = $"Hello from {nameof(RevokeAccesToken)}";
             return new ObjectResult(message);
         }
 
-        [HttpGet("update")]
+        [HttpGet("check")]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult UpdateService()
+        public IActionResult CheckAccesToken()
         {
 
             //Service method call
             //ex : 
-            //Service.UpdateService();
+            //Service.CheckAccesToken();
 
 
 
-            var message = $"Hello from {nameof(UpdateService)}";
+            var message = $"Hello from {nameof(CheckAccesToken)}";
             return new ObjectResult(message);
         }
 
@@ -85,3 +85,4 @@ namespace API.Controllers
 
 
     }
+}
