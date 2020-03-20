@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenTheDoor.Exceptions
+namespace OpenTheDoor.Core.Exceptions
 {
     [Serializable]
     class InvalidScopeServiceException : Exception

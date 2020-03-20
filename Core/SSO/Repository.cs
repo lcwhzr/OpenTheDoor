@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using OpenTheDoor.Models;
+using OpenTheDoor.Core.Models;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace OpenTheDoor.SSO
+namespace OpenTheDoor.Core.SSO
 {
     public class Repository<T> : IRepository<T>  where T : class
-
     {
         private readonly SSOContext _context = null;
         private   DbSet<T> table = null;
@@ -19,8 +18,6 @@ namespace OpenTheDoor.SSO
             _context = new SSOContext(connectionString);
             table = _context.Set<T>();
         }
-
-
 
         public async void DeleteAsync(object id)
         {
@@ -52,9 +49,6 @@ namespace OpenTheDoor.SSO
         {
             table.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
-
         }
-
-        
     }
 }

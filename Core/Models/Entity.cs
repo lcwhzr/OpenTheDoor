@@ -1,5 +1,6 @@
 ﻿using System;
-namespace OpenTheDoor.Models
+
+namespace OpenTheDoor.Core.Models
 {
     abstract public class Entity
     {

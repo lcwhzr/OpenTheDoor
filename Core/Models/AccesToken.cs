@@ -2,13 +2,12 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using OpenTheDoor.SSO;
+using OpenTheDoor.Core.SSO;
 
-namespace OpenTheDoor.Models
+namespace OpenTheDoor.Core.Models
 {
     public class AccesToken : Entity
     {
-
         private string Identifier;
         private DateTime Expiry;
         private string UserIdentifier;

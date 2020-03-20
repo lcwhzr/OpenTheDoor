@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using OpenTheDoor.Models;
+using OpenTheDoor.Core.Models;
 
-namespace OpenTheDoor.SSO
+namespace OpenTheDoor.Core.SSO
 {
     internal interface IRepository<T> 
     {
@@ -14,6 +14,5 @@ namespace OpenTheDoor.SSO
         void Update(T entity);
         void DeleteAsync(object id);
         void Save();
-
     }
 }
