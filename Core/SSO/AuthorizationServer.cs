@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenTheDoor.Core.SSO
+namespace Core.SSO
 {
     public  class AuthorizationServer
     { 

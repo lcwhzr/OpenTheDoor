@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using OpenTheDoor.Core.SSO;
+using Core.SSO;
 
-namespace OpenTheDoor.Core.Models
+namespace Core.Models
 {
     public class AccesToken : Entity
     {

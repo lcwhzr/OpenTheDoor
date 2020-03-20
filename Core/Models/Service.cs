@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenTheDoor.Core.Models
+namespace Core.Models
 {
     public class Service : Entity
     {

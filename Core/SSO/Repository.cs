@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using OpenTheDoor.Core.Models;
+using Core.Models;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace OpenTheDoor.Core.SSO
+namespace Core.SSO
 {
     public class Repository<T> : IRepository<T>  where T : class
     {
