@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Models;
 using Core.SSO;
@@ -8,49 +7,40 @@ namespace Core.Managers
 {
     public class AccesTokensManager
     {
-
         private Repository<AccesToken> accesTokenRepository;
+
         public AccesTokensManager()
         {
         }
 
-
-
-        void AddAccesToken(AccesToken accesToken)
+        public void AddAccesToken(AccesToken accesToken)
         {
             accesTokenRepository.InsertAsync(accesToken);
             accesTokenRepository.Save();
-
-
-
         }
 
-        async Task<List<AccesToken>> GetAccesTokensAsync()
+        public async Task<List<AccesToken>> GetAccesTokensAsync()
         {
             List<AccesToken> accesTokens = await accesTokenRepository.GetAllAsync();
             accesTokenRepository.Save();
-            return accesTokens;
 
+            return accesTokens;
         }
 
-        void DeleteAccesTokenAsync(object id)
+        public void DeleteAccesTokenAsync(object id)
         {
             accesTokenRepository.DeleteAsync(id);
             accesTokenRepository.Save();
-
         }
 
-
-
-        async Task<AccesToken> GetAccesTokenById(object id)
+        public async Task<AccesToken> GetAccesTokenById(object id)
         {
             AccesToken accesToken = await accesTokenRepository.GetById(id);
             accesTokenRepository.Save();
-            return accesToken;
 
+            return accesToken;
         }
     }
-
 }
 
     
