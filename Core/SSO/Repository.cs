@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Core.Models;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using OpenTheDoor.SSO;
 
 namespace Core.SSO
 {
@@ -15,7 +16,7 @@ namespace Core.SSO
 
         public Repository()
         {
-            _context = new SSOContext(connectionString);
+            _context = new SSOContext();
             table = _context.Set<T>();
         }
 
