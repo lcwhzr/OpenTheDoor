@@ -56,8 +56,8 @@ namespace API
 
             services.AddDbContext<SSOContext>(options =>
 
-              options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("API")));
-
+              options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            // b => b.MigrationsAssembly("API")
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 

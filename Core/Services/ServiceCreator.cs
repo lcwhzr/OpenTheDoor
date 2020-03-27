@@ -8,7 +8,7 @@ namespace Core.Services
     public class ServiceCreator
     {
         private ServiceFactory _serviceFactory;
-        //private ScopesManager _scopesManager = new ScopesManager();
+        private ScopesManager _scopesManager;
         private ServicesManager _servicesManager;
 
         public ServiceFactory ServiceFactory

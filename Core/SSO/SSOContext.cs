@@ -26,16 +26,18 @@ namespace OpenTheDoor.SSO
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+        
+            
             //options
             //.UseSqlite(connectionString, providerOptions => providerOptions.CommandTimeout(60));
 
 
-            if (optionsBuilder.IsConfigured)
+            //if (optionsBuilder.IsConfigured)
 
-            {
+            //{
 
-                Console.WriteLine("ok");
-            }
+            //    Console.WriteLine("ok");
+            //}
 
         }
     }

@@ -13,7 +13,7 @@ namespace Core.Managers
 
         public ScopesManager(SSOContext sSOContext)
         {
-            //scopeRepository = new Repository<Scope>(sSOContext);
+            scopeRepository = new Repository<Scope>(sSOContext);
         }
 
         public void AddScope(Scope scope)
