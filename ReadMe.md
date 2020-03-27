@@ -7,10 +7,15 @@ et changer le champ suivant
 
 cd API !!!!!
 Pour faire les migrations 
+```
 dotnet ef migrations add <Nom de la Migration> --context SSOContext
-
+```
+Puis Faire 
+```
 dotnet ef database update
-
- Si vous devez supprimer la base 
+```
+ Si vous devez supprimer la base
+ ```
  dotnet ef database drop
+ ```
 
