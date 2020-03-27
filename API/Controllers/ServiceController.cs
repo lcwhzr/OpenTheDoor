@@ -26,9 +26,9 @@ namespace API.Controllers
             //JsonElement jv = new JsonElement(body);
             ArrayEnumerator ae = body.EnumerateArray();
             ae.MoveNext();
-            var domainName = ae.Current.GetProperty("domainName");
+            var domainName = ae.Current.GetProperty("domainName").ToString();
             ae.MoveNext();
-            var serviceScopeKey = ae.Current.GetProperty("serviceScopeKey");
+            var serviceScopeKey = ae.Current.GetProperty("serviceScopeKey").ToString();
             
             Console.WriteLine("domainName");
             Console.WriteLine(domainName);
@@ -38,7 +38,7 @@ namespace API.Controllers
             try
             {
                 ServiceCreator sc = new ServiceCreator();
-                //sc.Create(domainName, serviceScopeKey);
+                sc.Create(domainName, serviceScopeKey);
 
             }
             catch (Exception)

@@ -8,7 +8,7 @@ namespace Core.Services
     public class ServiceCreator
     {
         private ServiceFactory _serviceFactory;
-        private ScopesManager _scopesManager;
+        //private ScopesManager _scopesManager = new ScopesManager();
         private ServicesManager _servicesManager;
 
         public ServiceFactory ServiceFactory
@@ -19,13 +19,14 @@ namespace Core.Services
             }
         }
 
-        public ScopesManager ScopeManager
-        {
-            set
-            {
-                _scopesManager = value;
-            }
-        }
+        //public ScopesManager ScopeManager
+        //{
+        //    set
+        //    {
+        //        //_scopesManager = value;
+        //        _scopesManager = new ScopesManager();
+        //    }
+        //}
 
         public ServicesManager ServiceManager
         {
@@ -47,9 +48,18 @@ namespace Core.Services
             }
 
             Scope scope = new Scope(serviceScopeKey);
+            try
+            {
+                //_scopesManager.AddScope(scope);
+                _scopesManager.AddScope(scope);
 
-            _scopesManager.AddScope(scope);
+            }
+            catch (System.Exception)
+            {
 
+                throw;
+            }
+            
             Service service = _serviceFactory.Create(serviceDomainName, scope);
 
             _servicesManager.AddService(service);

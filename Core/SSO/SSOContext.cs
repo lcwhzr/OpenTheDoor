@@ -10,7 +10,8 @@ namespace OpenTheDoor.SSO
     {
         public SSOContext()
         {
-            Database.EnsureCreated();
+            var success = Database.EnsureCreated();
+            Console.WriteLine(success);
         }
 
         public SSOContext(DbContextOptions<SSOContext> options) : base(options)

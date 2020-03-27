@@ -10,13 +10,13 @@ namespace Core.SSO
 {
     public class Repository<T> : IRepository<T>  where T : class
     {
-        private readonly SSOContext _context = null;
+        private SSOContext _context;
         private   DbSet<T> table = null;
         private string connectionString;
 
-        public Repository()
+        public Repository(SSOContext ssoContext)
         {
-            _context = new SSOContext();
+            _context = ssoContext;
             table = _context.Set<T>();
         }
 

@@ -2,15 +2,18 @@
 using System.Threading.Tasks;
 using Core.Models;
 using Core.SSO;
+using OpenTheDoor.SSO;
 
 namespace Core.Managers
 {
     public class ScopesManager
     {
+        //private Repository<Scope> scopeRepository = new Repository<Scope>();
         private Repository<Scope> scopeRepository;
 
-        public ScopesManager()
+        public ScopesManager(SSOContext sSOContext)
         {
+            //scopeRepository = new Repository<Scope>(sSOContext);
         }
 
         public void AddScope(Scope scope)
