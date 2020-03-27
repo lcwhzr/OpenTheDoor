@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using API.Features;
+using Core.Models;
+using Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,12 +18,16 @@ namespace API.Controllers
         [Authorize(Policy = Policies.all_access)]
         public IActionResult CreateAccessToken()
         {
+            try
+            {
+                AccessTokenCreator atc = new AccessTokenCreator();
+                atc.Create("toto", "toto_key", new Service(), new List<Scope>());
+            }
+            catch (Exception)
+            {
 
-            //Service method call
-            //ex : 
-            //Service.CreateAccessToken();
-
-
+                throw;
+            }
 
             var message = $"Hello from {nameof(CreateAccessToken)}";
             return new ObjectResult(message);

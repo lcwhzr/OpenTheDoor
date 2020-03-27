@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net.Mime;
+using System.Text.Json;
 using API.Features;
+using Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static System.Text.Json.JsonElement;
 
 namespace API.Controllers
 {
@@ -14,19 +15,41 @@ namespace API.Controllers
     public class ServiceController : ControllerBase
     {
 
-        [HttpGet("create")]
+        [HttpPost("create")]
+        [Consumes(MediaTypeNames.Application.Json)]
+        //[ProducesResponseType(StatusCodes.Status201Created)]
+        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Authorize(Policy = Policies.all_access)]
-        public IActionResult CreateService()
+        public IActionResult CreateService([FromBody] JsonElement body)
         {
 
-            //Service method call
-            //ex : 
-            //Service.CreateService();
+            //JsonElement jv = new JsonElement(body);
+            ArrayEnumerator ae = body.EnumerateArray();
+            ae.MoveNext();
+            var domainName = ae.Current.GetProperty("domainName");
+            ae.MoveNext();
+            var serviceScopeKey = ae.Current.GetProperty("serviceScopeKey");
+            
+            Console.WriteLine("domainName");
+            Console.WriteLine(domainName);
+            Console.WriteLine("serviceScopeKey");
+            Console.WriteLine(serviceScopeKey);
 
+            try
+            {
+                ServiceCreator sc = new ServiceCreator();
+                //sc.Create(domainName, serviceScopeKey);
 
+            }
+            catch (Exception)
+            {
 
-            var message = $"Hello from {nameof(CreateService)}";
-            return new ObjectResult(message);
+                throw;
+            }
+
+            //var message = $"Hello from {nameof(CreateService)} || {domainName} \\ {serviceScopeKey}";
+            //return new ObjectResult(message);
+            return new ObjectResult("");
         }
 
         [HttpGet("delete")]
