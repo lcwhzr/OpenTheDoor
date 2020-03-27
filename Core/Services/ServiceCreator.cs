@@ -50,7 +50,7 @@ namespace Core.Services
 
             _scopesManager.AddScope(scope);
 
-            Service service = _serviceFactory.CreateService(serviceDomainName, scope);
+            Service service = _serviceFactory.Create(serviceDomainName, scope);
 
             _servicesManager.AddService(service);
 

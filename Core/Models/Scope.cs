@@ -4,18 +4,13 @@ namespace Core.Models
 {
     public class Scope : Entity
     {
-        private string Key;
+        public string Key { get; }
 
         public Scope() { }
 
         public Scope(string scopeKey): base()
         {
             Key = scopeKey;
-        }
-
-        public string GetKey()
-        {
-            return Key;
         }
     }
 }

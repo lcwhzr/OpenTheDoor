@@ -4,10 +4,10 @@ namespace Core.Models
 {
     public class RefreshToken : Entity
     {
-        public string Identifier { get; internal set; }
-        public DateTime Expiry { get; internal set; }
-        public AccessToken AccessToken { get; internal set; }
-        private bool Revoked = false;
+        public string Identifier { get; }
+        public DateTime Expiry { get; }
+        public AccessToken AccessToken { get; }
+        public bool Revoked { get; }
 
         public RefreshToken() { }
 
@@ -20,31 +20,7 @@ namespace Core.Models
             Identifier = identifier;
             Expiry = expiry;
             AccessToken = accessToken;
-        }
-
-        public string GetIdentifier()
-        {
-            return Identifier;
-        }
-
-        public DateTime GetExpiry()
-        {
-            return Expiry;
-        }
-
-        public AccessToken GetAccessToken()
-        {
-            return AccessToken;
-        }
-
-        public bool IsRevoked()
-        {
-            return Revoked;
-        }
-
-        public void Revoke()
-        {
-            Revoked = true;
+            Revoked = false;
         }
     }
 }
