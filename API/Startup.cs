@@ -2,6 +2,7 @@
 using API.Features;
 using API.Interfaces;
 using API.NewFolder;
+using Core;
 using Core.SSO;
 //using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authorization;
@@ -53,11 +54,13 @@ namespace API
                 options.DefaultChallengeScheme = ApiKeyAuthenticationOptions.DefaultScheme;
             }).AddApiKeySupport(options => { });
 
+            Setting.ConnectionString = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<SSOContext>(options =>
+            //services.AddDbContext<SSOContext>(options =>
 
-              options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("API")));
+              //options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("API")));
 
+            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("API")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 

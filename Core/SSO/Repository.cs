@@ -10,9 +10,9 @@ namespace Core.SSO
 {
     public class Repository<T> : IRepository<T>  where T : class
     {
-        private readonly SSOContext _context = null;
+        private readonly SSOContext _context;
         private   DbSet<T> table = null;
-        private string connectionString;
+     
 
         public Repository()
         {

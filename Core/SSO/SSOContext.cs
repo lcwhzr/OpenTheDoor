@@ -1,4 +1,5 @@
 using System;
+using Core;
 using Core.Models;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,7 @@ namespace OpenTheDoor.SSO
     {
         public SSOContext()
         {
-            Database.EnsureCreated();
+            
         }
 
         public SSOContext(DbContextOptions<SSOContext> options) : base(options)
@@ -29,11 +30,13 @@ namespace OpenTheDoor.SSO
             //.UseSqlite(connectionString, providerOptions => providerOptions.CommandTimeout(60));
 
 
+
             if (optionsBuilder.IsConfigured)
 
             {
 
-                Console.WriteLine("ok");
+
+                optionsBuilder.UseSqlServer(Setting.ConnectionString);
             }
 
         }

@@ -11,6 +11,7 @@ namespace Core.Managers
 
         public ScopesManager()
         {
+            scopeRepository = new Repository<Scope>();
         }
 
         public void AddScope(Scope scope)

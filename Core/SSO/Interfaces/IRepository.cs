@@ -6,7 +6,9 @@ using Core.Models;
 
 namespace Core.SSO
 {
-    internal interface IRepository<T> 
+
+   
+    internal interface IRepository<T> where T : class
     {
         Task<List<T>> GetAllAsync();
         Task<T> GetById(object id);
